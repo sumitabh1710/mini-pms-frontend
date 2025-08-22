@@ -34,7 +34,7 @@ export const GET_ORGANIZATION = gql`
 // Fetch projects by organization slug with enhanced filtering and fields
 export const GET_PROJECTS = gql`
   query GetProjects(
-    $organizationSlug: String!
+    $organizationSlug: String
     $status: String
     $search: String
   ) {

@@ -24,6 +24,23 @@ export const CREATE_PROJECT = gql`
   }
 `;
 
+// Create new organization (no update support)
+export const CREATE_ORGANIZATION = gql`
+  mutation CreateOrganization($input: CreateOrganizationInput!) {
+    createOrganization(input: $input) {
+      success
+      errors
+      organization {
+        id
+        name
+        slug
+        contactEmail
+        createdAt
+      }
+    }
+  }
+`;
+
 // Create new task with enhanced error handling
 export const CREATE_TASK = gql`
   mutation CreateTask($input: CreateTaskInput!) {
